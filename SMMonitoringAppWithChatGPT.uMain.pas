@@ -4,12 +4,16 @@ interface
 
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes,
-  System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Memo.Types,
+  System.Variants
+, FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Memo.Types,
   FMX.ScrollBox, FMX.Memo, FMX.StdCtrls, FMX.Controls.Presentation, FMX.Edit,
-  FMX.Objects, FMX.Layouts, FMX.MultiView, REST.Types, REST.Client,
-  Data.Bind.Components, Data.Bind.ObjectScope, System.Net.URLClient,
-  System.Net.HttpClient, System.Net.HttpClientComponent;
+  FMX.Objects, FMX.Layouts, FMX.MultiView
+, REST.Types
+, REST.Client
+, Data.Bind.Components, Data.Bind.ObjectScope
+, System.Net.URLClient
+, System.Net.HttpClient
+, System.Net.HttpClientComponent;
 
 type
   TFormMain = class(TForm)
@@ -124,7 +128,7 @@ begin
 
         if LResponse.StatusCode = 200 then
         begin
-          ShowMessage('Request was successful.');
+          // ShowMessage('Request was successful.');
           MemoResult.Lines.Add(LResponse.ContentAsString(TEncoding.UTF8));
         end
         else
